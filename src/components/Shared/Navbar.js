@@ -1,9 +1,10 @@
 import React from 'react'
+import {Link,Match} from "@reach/router"
 
 export default function Navbar() {
   return (
   
-<div className="navbar bg-neutral">
+<div className="navbar">
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -24,11 +25,13 @@ export default function Navbar() {
         <li><a>Item 3</a></li>
       </ul>
     </div>
-    <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+    <a className=" normal-case text-xl font-semibold">Clean & Co.</a>
   </div>
   <div className="navbar-end hidden lg:flex">
     <ul className="menu menu-horizontal p-0">
-      <li><a>Item 1</a></li>
+      <li><Link  to="/">Home</Link></li>
+      <li><Link to="/services">Services</Link></li>
+      <li><Link to="/login">Login</Link></li>
       <li tabIndex={0}>
         <a>
           Parent
@@ -39,7 +42,7 @@ export default function Navbar() {
           <li><a>Submenu 2</a></li>
         </ul>
       </li>
-      <li><a>Item 3</a></li>
+      <li><Link to="/about">About</Link></li>
     </ul>
   </div>
  
